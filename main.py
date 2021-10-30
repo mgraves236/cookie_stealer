@@ -4,6 +4,9 @@ from selenium import webdriver
 USER_AGENT = "selenium"
 change_cookie = True
 
+if (len(sys.argv) > 0):
+    change_cookie = True
+
 def parse_cookies(cookies):
     cookies = cookies.split('; ')
     result = []
